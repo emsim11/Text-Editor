@@ -5,19 +5,18 @@
     "description": "",
     "main": "Server.js",
     "scripts": {
-        "build": "",
-        "client": "",
-        "dev": "",
-        "install": "",
-        "server": "",
-        "start": ""
+        "build": "cd Client && npm run build",
+        "client": "cd Client && npm start",
+        "dev": "concurrently \"cd Server && npm run server\" \"cd Client && npm run dev\"",
+        "install": "cd Server && npm i && cd ../Client && npm i",
+        "server": "cd Server nodemon Server.js --ignore Client",
+        "start": "npm run build && cd Server && node Server.js"
     },
     "keywords": [],
     "author": "Emily Simone",
     "license": "MIT",
     "dependencies": {
-        "express": "^4.19.2",
-        "if-env": "^1.0.4"
+        "express": "^4.19.2"
     },
     "devDependencies": {
         "concurrently": "^8.2.2",

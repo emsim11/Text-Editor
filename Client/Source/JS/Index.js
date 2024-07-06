@@ -17,16 +17,16 @@ const LoadSpinner = () => {
     Main.appendChild(Spinner);
 };
 
-const Editor = new Editor();
+const NewEditor = new Editor();
 
-if (typeof Editor === 'undefined') {
+if (typeof NewEditor === 'undefined') {
     LoadSpinner();
 }
 
 // Check If Service Workers Are Supported
 if ('ServiceWorker' in navigator) {
     // Register Workbox Service Worker
-    const WorkboxSW = new Workbox('/Source/SW.js');
+    const WorkboxSW = new Workbox('/ServiceWorker.js');
     WorkboxSW.register();
 } else {
     console.error('Service Workers Are Not Supported In This Browser');
