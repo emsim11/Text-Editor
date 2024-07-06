@@ -1,0 +1,215 @@
+/* App Shell CSS */
+:Root {
+    --Primary: #31A9E1;
+    --Gray: #ECECEC;
+    --WhiteSmoke: #F5F5F5;
+    --Dark: #222222;
+    --MonoKai: #272822;
+    --NavBar-Height: 50px;
+}
+
+Body {
+    margin: 0;
+    background-color: var(--MonoKai);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+        Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+        sans-serif;
+}
+
+H1 {
+    font-size: 22px;
+}
+
+#NavBar {
+    height: var(--NavBar-Height);
+    background-color: var(--Primary);
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #FFFFFF;
+    font-size: 22px;
+    font-weight: 550;
+    letter-spacing: 0.9px;
+}
+
+.NavBar-Brand Img {
+    padding-top: 10px;
+}
+
+.Loading-Spinner {
+    animation-duration: 0.75s;
+    animation-iteration-count: infinite;
+    animation-name: Rotate-Forever;
+    animation-timing-function: linear;
+    height: 30px;
+    width: 30px;
+    border: 3px solid var(--Primary);
+    border-right-color: transparent;
+    border-radius: 50%;
+}
+
+.Loading-Container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - var(--NavBar-Height));
+}
+
+#Install-Button.Hidden {
+    display: none;
+}
+
+@keyframes Rotate-Forever {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.App-Update {
+    display: none;
+    position: absolute;
+    right: 10px;
+}
+
+.App-Update.Show {
+    display: block;
+}
+
+.Nav-Btn {
+    margin: 25px;
+}
+
+.Btn {
+    text-align: center;
+    display: inline-block;
+    padding: 0.5rem 1.2rem;
+    margin: 0;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 0.3rem;
+    border: 1px solid transparent;
+    outline: none;
+    color: #1A1A1A;
+    background-color: #AEAEAE;
+    transform: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+.Btn:Hover {
+    background-color: #CECECE;
+    cursor: pointer;
+}
+
+.Btn.Btn-Squared {
+    border-radius: 0;
+}
+  
+.Btn.Btn-Sm {
+    font-size: 0.85rem;
+    padding: 0.3rem 0.9rem;
+}
+  
+.Btn.Btn-Lg {
+    font-size: 1.25rem;
+    padding: 0.8rem 1.4rem;
+}
+  
+.Btn.Btn-Block {
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+  
+.Btn.Btn-Primary {
+    background-color: #2D3E50;
+    color: #D9E9E8;
+}
+  
+.Btn.Btn-Primary:Hover {
+    background-color: #57779A;
+}
+  
+.Btn.Btn-Danger {
+    background-color: #E64C66;
+    color: #FFFFFF;
+}
+  
+.Btn.Btn-Danger:Hover {
+    background-color: #EE8294;
+}
+  
+.Btn.Btn-Info {
+    background-color: #1BBC9B;
+    color: #FFFFFF;
+}
+  
+.Btn.Btn-Info:Hover {
+    background-color: #31E1BD;
+}
+  
+.Btn.Btn-Light {
+    background-color: #D9E9E8;
+    color: #1A1A1A;
+}
+  
+.Btn.Btn-Light:Hover {
+    background-color: #84B8B4;
+}
+  
+.Btn.Btn-Dark {
+    background-color: #1A1A1A;
+    color: #D9E9E8;
+}
+  
+.Btn.Btn-Dark:Hover {
+    background-color: #5F5F5F;
+}
+  
+.Btn.Btn-White {
+    background-color: #FFFFFF;
+    color: #1A1A1A;
+}
+  
+.Btn.Btn-White:Hover {
+    background-color: #CCCCCC;
+}
+  
+.Btn.Btn-Black {
+    background-color: #000000;
+    color: #FFFFFF;
+}
+  
+.Btn.Btn-Black:Hover {
+    background-color: #666666;
+}
+  
+.Btn.Btn-Link {
+    background-color: #1B89BC;
+    color: #FFFFFF;
+}
+  
+.Btn.Btn-Link:Hover {
+    background-color: #31A9E1;
+}
+  
+@media only screen and (max-width: 600px) {
+    .Nav-Btn {
+        display: none;
+    }
+  
+    .NavBar-Brand {
+        display: none;
+    }
+  
+    #NavBar {
+        justify-content: center;
+    }
+  
+    H1 {
+        font-size: 18px;
+    }
+}
